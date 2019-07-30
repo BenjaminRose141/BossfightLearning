@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 77912406}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Food
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,7 +206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77912401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.4, y: 0.09, z: -3.87}
+  m_LocalPosition: {x: 4.018, y: 0.09, z: -3.87}
   m_LocalScale: {x: 0.50444, y: 0.50444, z: 0.50444}
   m_Children: []
   m_Father: {fileID: 0}
@@ -288,11 +288,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ccd9a3dba666f42b8d9a3f91cd3582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 8d878ea7eb4df834ea3c480748cbd3a0, type: 2}
   foodItemsLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
-  viewRange: 200
+    m_Bits: 0
+  viewRange: 5
   foodItemsTag: Food
+  navMeshAgent: {fileID: 0}
 --- !u!195 &584384218
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -345,7 +347,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: 2100000, guid: 8d878ea7eb4df834ea3c480748cbd3a0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

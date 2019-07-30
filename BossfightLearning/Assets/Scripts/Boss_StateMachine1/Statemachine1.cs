@@ -10,6 +10,7 @@ public class Statemachine1
     public void ChangeState(IState1 newState)
     {
         Debug.Log("ChangeState");
+
         if(currentState != null)
         {
             currentState.Exit();
@@ -18,14 +19,21 @@ public class Statemachine1
         previousState = currentState;
         currentState = newState;
         currentState.Enter();
+
+        Debug.Log(currentState);
     }
 
     public void ExecuteStateUpdate()
     {
-        Debug.Log("ExecuteStateUpdate");
+        //Debug.Log("ExecuteStateUpdate");
         if(currentState != null)
         {
             currentState.Execute();
         }
+    }
+
+    public void ReturnToPreviousState()
+    {
+        currentState = previousState;
     }
 }
