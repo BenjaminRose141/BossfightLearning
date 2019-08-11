@@ -13,9 +13,6 @@ public class State1_Attack : IState1
     public void Enter()
     {
         Debug.Log("now Attacking");
-        Renderer mat = actor.gameObject.GetComponent<Renderer>();
-        actor.material.SetColor("_BaseColor", Color.red);
-        mat.material = actor.material;
     }
 
     public void Execute()

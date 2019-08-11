@@ -4,11 +4,16 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(Boss1_Feedback))]
 public class Boss1 : MonoBehaviour
 {
+    [SerializeField] 
+    private BossScriptableObject bossData;
     private Statemachine1 stateMachine = new Statemachine1();
 
-    public Material material; 
+    [SerializeField] 
+    public AnimationClip awake;
+
 
     [SerializeField]
     public LayerMask foodItemsLayer;        //public right now, should go onto Scriptable Object and be handled with Getter Setter there
@@ -19,12 +24,13 @@ public class Boss1 : MonoBehaviour
     public NavMeshAgent navMeshAgent = null;
 
     public Statemachine1 StateMachine { get => stateMachine; private set => stateMachine = value; }
+    public BossScriptableObject BossData { get => bossData; private set => bossData = value; }
 
     private void Start()
     {
         navMeshAgent = this.GetComponent<NavMeshAgent>();
         //this.stateMachine.ChangeState(new State1_SearchFor(foodItemsLayer, this.gameObject, viewRange, foodItemsTag, this.FoodFound));
-        this.StateMachine.ChangeState(new State1_Idle(this));
+        this.StateMachine.ChangeState(new State1_Awake(this));
     }
 
     private void Update()

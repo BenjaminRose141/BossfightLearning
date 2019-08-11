@@ -20,17 +20,10 @@ public class State1_Idle : IState1
         timerStart = Random.Range(4,10);
         Debug.Log("Timer: " + timerStart);
         timerCurrent = timerStart;
-
-        Renderer mat = actor.gameObject.GetComponent<Renderer>();
-        actor.material.SetColor("_BaseColor", Color.blue);
-        mat.material = actor.material;
     }
 
     public void Execute()
-    {   Renderer mat = actor.gameObject.GetComponent<Renderer>();
-        actor.material.SetColor("_BaseColor", Color.blue);
-        mat.material = actor.material;
-
+    {
         timerCurrent -= Time.deltaTime;
         
         if(timerCurrent <= 0)

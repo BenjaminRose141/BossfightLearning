@@ -24,9 +24,6 @@ public class State1_SearchFor : IState1
     public void Enter()
     {
         Debug.Log("Now in Searching");
-        Renderer mat = actorGameObject.GetComponent<Renderer>();
-        actorGameObject.GetComponent<Boss1>().material.SetColor("_BaseColor", Color.yellow);
-        mat.material = actorGameObject.GetComponent<Boss1>().material;
     }
 
     public void Execute()
