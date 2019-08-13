@@ -293,12 +293,13 @@ MonoBehaviour:
   bossData: {fileID: 11400000, guid: 88cb102ae2b7d8d479cb887e4185f43f, type: 2}
   awake: {fileID: 7400000, guid: 23b63ebab11b6d64c9d8e5add6abc146, type: 2}
   attack: {fileID: 7400000, guid: 72fa71526ca5eef4abf5617e97bda794, type: 2}
+  food: {fileID: 0}
   foodItemsLayer:
     serializedVersion: 2
     m_Bits: 0
   viewRange: 5
   foodItemsTag: Food
-  navMeshAgent: {fileID: 0}
+  navMeshAgent: {fileID: 584384218}
 --- !u!195 &584384218
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -428,6 +429,8 @@ MonoBehaviour:
   animator: {fileID: 584384223}
   idle: {fileID: 7400000, guid: bf620d3088dc2cb48ba15e330eca5fa5, type: 2}
   attackParticlesPrefab: {fileID: 8798648961580902783, guid: 20e587d948adcb749847c562f3667a15,
+    type: 3}
+  meteorPrefab: {fileID: 6093962115228936250, guid: 98e661bac01ac5745834d1261a0ebb1c,
     type: 3}
   material: {fileID: 2100006, guid: 691c8b080d8f55744a58f5e86b96915d, type: 3}
 --- !u!1 &1042364698

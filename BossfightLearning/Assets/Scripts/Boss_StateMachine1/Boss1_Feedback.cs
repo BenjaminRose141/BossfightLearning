@@ -18,6 +18,10 @@ public class Boss1_Feedback : MonoBehaviour
     [SerializeField]
     GameObject attackParticlesPrefab;
 
+    //Objects
+    [SerializeField]
+    GameObject meteorPrefab;
+
     //Material
     public Material material; 
 
@@ -70,6 +74,14 @@ public class Boss1_Feedback : MonoBehaviour
         ParticleSystem parts = particleInstance.GetComponent<ParticleSystem>();
         float totalDuration = parts.main.duration + parts.main.startLifetime.constant;
         Destroy(particleInstance, totalDuration);
+    }
+
+    public void SpawnMeteor()
+    {
+        GameObject meteorInstance = Instantiate(meteorPrefab, actor.food) as GameObject;
+        ParticleSystem parts = meteorInstance.GetComponent<ParticleSystem>();
+        float totalDuration = parts.main.duration + parts.main.startLifetime.constant + parts.main.startDelay.constant;
+        Destroy(meteorInstance, totalDuration);
     }
 
  

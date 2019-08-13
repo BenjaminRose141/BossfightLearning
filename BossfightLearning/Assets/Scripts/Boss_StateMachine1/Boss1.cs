@@ -16,6 +16,8 @@ public class Boss1 : MonoBehaviour
     [SerializeField] 
     public AnimationClip attack;
 
+    public Transform food;
+
 
     [SerializeField]
     public LayerMask foodItemsLayer;        //public right now, should go onto Scriptable Object and be handled with Getter Setter there
@@ -48,6 +50,7 @@ public class Boss1 : MonoBehaviour
     public void ChooseBehaviourAfterIdle(SearchResult searchResult)
     {
         var foundFoodItems = searchResult.allHitObjectsWithRequiredTag;
+        food = foundFoodItems[0].gameObject.transform;
         
         Debug.Log("Choosing After Idle");
         if(foundFoodItems.Count > 0)
