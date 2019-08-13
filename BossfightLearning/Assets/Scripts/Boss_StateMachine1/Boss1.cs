@@ -50,12 +50,12 @@ public class Boss1 : MonoBehaviour
     public void ChooseBehaviourAfterIdle(SearchResult searchResult)
     {
         var foundFoodItems = searchResult.allHitObjectsWithRequiredTag;
-        food = foundFoodItems[0].gameObject.transform;
         
         Debug.Log("Choosing After Idle");
         if(foundFoodItems.Count > 0)
         {
             Debug.Log("not empty" + foundFoodItems.Count);
+            food = foundFoodItems[0].gameObject.transform;
         }
         else Debug.Log("Empty");
 

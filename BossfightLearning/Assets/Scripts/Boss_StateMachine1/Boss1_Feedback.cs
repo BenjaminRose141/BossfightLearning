@@ -16,11 +16,11 @@ public class Boss1_Feedback : MonoBehaviour
 
     //Particles
     [SerializeField]
-    GameObject attackParticlesPrefab;
+    GameObject attackParticlesPrefab = null;
 
     //Objects
     [SerializeField]
-    GameObject meteorPrefab;
+    GameObject meteorPrefab = null;
 
     //Material
     public Material material; 
