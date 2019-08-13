@@ -13,6 +13,8 @@ public class Boss1 : MonoBehaviour
 
     [SerializeField] 
     public AnimationClip awake;
+    [SerializeField] 
+    public AnimationClip attack;
 
 
     [SerializeField]

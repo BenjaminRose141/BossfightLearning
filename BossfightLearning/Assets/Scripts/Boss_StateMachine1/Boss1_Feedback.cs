@@ -7,14 +7,26 @@ public class Boss1_Feedback : MonoBehaviour
     //Animation Data (individual Scriptable Object?)
     [SerializeField] 
     private BossScriptableObject bossData;
-
     [SerializeField]
-    private Animator animator;
+    private Animator animator = null;
     [SerializeField]
     private AnimationClip idle;
+    
+    private Boss1 actor = null;
+
+    //Particles
+    [SerializeField]
+    GameObject attackParticlesPrefab;
 
     //Material
     public Material material; 
+
+    private void Start()
+    {
+        actor = this.gameObject.GetComponent<Boss1>();
+
+        //add nullchecks!
+    }
 
     //Event?
     //new state animation (state)
@@ -52,6 +64,12 @@ public class Boss1_Feedback : MonoBehaviour
     private void PlayAttack()
     {
         Debug.Log("PlayingAttackAnimation");
+        animator.Play("Attack");
+        
+        GameObject particleInstance = Instantiate(attackParticlesPrefab, actor.gameObject.transform.position, actor.gameObject.transform.rotation) as GameObject;
+        ParticleSystem parts = particleInstance.GetComponent<ParticleSystem>();
+        float totalDuration = parts.main.duration + parts.main.startLifetime.constant;
+        Destroy(particleInstance, totalDuration);
     }
 
  
