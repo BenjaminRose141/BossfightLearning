@@ -3,28 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Tornado : MonoBehaviour
+public class Tornado : Actor
 {
-    private Statemachine1 stateMachine = new Statemachine1();
+
     public NavMeshAgent navMeshAgent = null;
 
     public AnimationClip awake;
-
-    public Statemachine1 StateMachine { get => stateMachine; set => stateMachine = value; }
-
-    private void Awake()
-    {
-    }
 
     private void Start()
     {
         navMeshAgent = this.GetComponent<NavMeshAgent>();
         this.StateMachine.ChangeState(new State1_Awake_Tornado(this));
-    }
-
-    private void Update()
-    {
-        StateMachine.ExecuteStateUpdate();
     }
 
     public void ChooseNewPosition()

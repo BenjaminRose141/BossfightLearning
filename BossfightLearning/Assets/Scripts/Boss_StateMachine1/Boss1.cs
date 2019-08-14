@@ -5,12 +5,8 @@ using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
 [RequireComponent(typeof(Boss1_Feedback))]
-public class Boss1 : MonoBehaviour
+public class Boss1 : Actor
 {
-    [SerializeField] 
-    private BossScriptableObject bossData;
-    private Statemachine1 stateMachine = new Statemachine1();
-
     [SerializeField] 
     public AnimationClip awake;
     [SerializeField] 
@@ -26,9 +22,6 @@ public class Boss1 : MonoBehaviour
     [SerializeField]
     public string foodItemsTag = null;
     public NavMeshAgent navMeshAgent = null;
-
-    public Statemachine1 StateMachine { get => stateMachine; private set => stateMachine = value; }
-    public BossScriptableObject BossData { get => bossData; private set => bossData = value; }
 
     private void Start()
     {
