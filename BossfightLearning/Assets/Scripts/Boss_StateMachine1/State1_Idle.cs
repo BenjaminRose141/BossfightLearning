@@ -35,7 +35,7 @@ public class State1_Idle : IState1
 
     private void ChooseBehaviour()
     {
-        actor.StateMachine.ChangeState(new State1_SearchFor(actor.foodItemsLayer, actor.gameObject, actor.viewRange, actor.foodItemsTag, actor.ChooseBehaviourAfterIdle));
+        actor.StateMachine.ChangeState(new State1_SearchFor(actor.playerLayer, actor.gameObject, actor.viewRange, actor.playerTag, actor.ChooseBehaviourAfterIdle));
     }
 
     public void Exit()

@@ -76,7 +76,9 @@ public class Boss1_Feedback : Feedback
 
     public void SpawnMeteor()
     {
-        GameObject meteorInstance = Instantiate(meteorPrefab, actor.food) as GameObject;
+        Debug.Log("SpawnMeteor");
+        GameObject meteorInstance = Instantiate(meteorPrefab, actor.player.position, actor.player.rotation) as GameObject;
+        meteorInstance.transform.position = actor.player.position;
         ParticleSystem parts = meteorInstance.GetComponent<ParticleSystem>();
         float totalDuration = parts.main.duration + parts.main.startLifetime.constant + parts.main.startDelay.constant;
         Destroy(meteorInstance, totalDuration);

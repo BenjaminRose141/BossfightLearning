@@ -163,10 +163,9 @@ GameObject:
   - component: {fileID: 77912404}
   - component: {fileID: 77912403}
   - component: {fileID: 77912402}
-  - component: {fileID: 77912406}
   m_Layer: 0
-  m_Name: Cube (1)
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -237,25 +236,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77912401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.69, y: 0.09, z: -6.4}
+  m_LocalPosition: {x: 1.52, y: 0.09, z: 0.13}
   m_LocalScale: {x: 0.50444, y: 0.50444, z: 0.50444}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &77912406
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 77912401}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &235414991
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,12 +421,12 @@ MonoBehaviour:
   actorData: {fileID: 11400000, guid: 88cb102ae2b7d8d479cb887e4185f43f, type: 2}
   awake: {fileID: 7400000, guid: 23b63ebab11b6d64c9d8e5add6abc146, type: 2}
   attack: {fileID: 7400000, guid: 72fa71526ca5eef4abf5617e97bda794, type: 2}
-  food: {fileID: 0}
-  foodItemsLayer:
+  player: {fileID: 0}
+  playerLayer:
     serializedVersion: 2
     m_Bits: 0
   viewRange: 5
-  foodItemsTag: Food
+  playerTag: Player
   navMeshAgent: {fileID: 584384218}
 --- !u!195 &584384218
 NavMeshAgent:
