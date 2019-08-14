@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tornado_Feedback : MonoBehaviour
+public class Tornado_Feedback : Feedback
 {
    //Animation Data (individual Scriptable Object?)
-    [SerializeField] 
-    private BossScriptableObject bossData;
     [SerializeField]
     private Animator animator = null;
     [SerializeField]

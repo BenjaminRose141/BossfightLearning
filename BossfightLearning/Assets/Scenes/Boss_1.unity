@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ccd9a3dba666f42b8d9a3f91cd3582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossData: {fileID: 11400000, guid: 88cb102ae2b7d8d479cb887e4185f43f, type: 2}
+  actorData: {fileID: 11400000, guid: 88cb102ae2b7d8d479cb887e4185f43f, type: 2}
   awake: {fileID: 7400000, guid: 23b63ebab11b6d64c9d8e5add6abc146, type: 2}
   attack: {fileID: 7400000, guid: 72fa71526ca5eef4abf5617e97bda794, type: 2}
   food: {fileID: 0}
@@ -567,7 +567,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df2f97a843c06a4c8d9c898e9ba6d34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossData: {fileID: 11400000, guid: 88cb102ae2b7d8d479cb887e4185f43f, type: 2}
   animator: {fileID: 584384223}
   idle: {fileID: 7400000, guid: bf620d3088dc2cb48ba15e330eca5fa5, type: 2}
   attackParticlesPrefab: {fileID: 8798648961580902783, guid: 20e587d948adcb749847c562f3667a15,
@@ -606,7 +605,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8d29fd699d1144885f443bb947ad32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossData: {fileID: 0}
   animator: {fileID: 235414998}
   awake: {fileID: 0}
   attackParticlesPrefab: {fileID: 0}
@@ -624,6 +622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d100b99245998104a87b42e50f2e6e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actorData: {fileID: 0}
   navMeshAgent: {fileID: 960282122}
   awake: {fileID: 7400000, guid: 10c7110588f9f4a42aa456168d1e4009, type: 2}
 --- !u!195 &960282122
