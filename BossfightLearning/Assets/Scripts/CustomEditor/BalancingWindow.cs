@@ -70,6 +70,6 @@ public class BalancingWindow : EditorWindow
     {
         GUILayout.BeginArea(headerSection);
 
-        GUILayout.EnndArea();
+        GUILayout.EndArea();
     }
 }

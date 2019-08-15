@@ -9,9 +9,9 @@ public class Actor : MonoBehaviour
     public Statemachine1 StateMachine { get => stateMachine; private set => stateMachine = value; }
 
     [SerializeField]
-    private ScriptableObject actorData;
+    private CharacterScriptableObject actorData;
 
-    public ScriptableObject ActorData { get => actorData; private set => actorData = value; }
+    public CharacterScriptableObject ActorData { get => actorData; private set => actorData = value; }
 
     private void Update()
     {

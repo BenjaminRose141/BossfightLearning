@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Feedback : MonoBehaviour
 {
-    private ScriptableObject actorData;
+    private CharacterScriptableObject actorData;
 
     private void Start()
     {
