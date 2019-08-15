@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Boss1
   m_EditorClassIdentifier: 
   healthMax: 0
+  healthCurrent: 0
+  meteoritePrefab: {fileID: 0}
