@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Character", menuName = "Character")]
+[CreateAssetMenu(fileName = "New Character", menuName = "Characters/Character")]
 public class CharacterScriptableObject : ScriptableObject
 {
     [Header("---Info-------")]
@@ -16,4 +16,10 @@ public class CharacterScriptableObject : ScriptableObject
 
     [Header("---Prefab-------")]
     public GameObject characterPrefab;
+
+    void Init()
+    {
+        healthCurrent = healthMax;
+        Debug.Log("Awake");
+    }
 }

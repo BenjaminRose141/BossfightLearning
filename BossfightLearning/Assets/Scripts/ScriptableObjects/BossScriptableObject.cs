@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Boss", menuName = "Boss")]
+[CreateAssetMenu(fileName = "New Boss", menuName = "Characters/Boss")]
 public class BossScriptableObject : CharacterScriptableObject
 {
     [Space]
